@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Editar Producto</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        form { display: inline-block; margin-top: 20px; }
+        input { display: block; margin: 10px 0; padding: 8px; }
+        button { background-color: #4CAF50; color: white; padding: 8px 16px; border: none; border-radius: 3px; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Editar Producto</h1>
+    <form method="post">
+        Descripción: <input type="text" name="descripcion" value="{{ producto['descripcion'] }}" required>
+        Cantidad: <input type="number" name="cantidad" value="{{ producto['cantidad'] }}" required>
+        Precio: <input type="text" name="precio" value="{{ producto['precio'] }}" required>
+        <button type="submit">Guardar Cambios</button>
+    </form>
+    <p><a href="{{ url_for('index') }}">Volver a la lista de productos</a></p>
+</body>
+</html>
